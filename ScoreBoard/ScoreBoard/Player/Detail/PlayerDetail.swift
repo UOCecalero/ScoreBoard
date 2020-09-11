@@ -11,7 +11,7 @@ import SwiftUI
 struct PlayerDetail: View {
     
     var temporadas = ["19/20", "18/19", "17/18", "Histórico"]
-    
+    @State var id: Int
     
     var body: some View {
         ScrollView {
@@ -62,7 +62,7 @@ struct PlayerDetail: View {
 
 struct PlayerDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerDetail()
+        PlayerDetail(id: 154)
     }
 }
 
