@@ -6,7 +6,7 @@
 //  Copyright © 2020 Iflet.tech. All rights reserved.
 //
 
-import Foundation
+import Alamofire
 import Combine
 import UIKit
 
@@ -17,7 +17,82 @@ enum APIError: Error {
     case unknown
 }
 
+
+/// Defines the various types of authentication types.
+///
+/// - basic:    Defines a `basic` authentication that sends an authorization header with a token like `Basic XXXXXXX`.
+/// - bearer:   Defines a `bearer` authentication that sends an authorization header with a token like `Bearer XXXXXXX`.
+/// - oauth2:   Defines an `OAuth2` authentication. Pending implementation.
+/// - none:     Defines no authentication and discard authentication token.
+enum AuthenticationType {
+    case basic
+    case bearer
+    case oauth2
+    case rapidAPIKey
+    case none
+}
+
 struct APISession: APIService {
+    
+    /// Starts the download requests inmediately. By default you can perform download requests on demand. It defaults to `false`.
+    var startDownloadRequestsImmediately = false
+    
+    /// Sets the authentication method for the requests. It defaults to `none`.
+    var authenticationType: AuthenticationType = .bearer
+    
+    /// The timeout interval for all requests within the session. It defaults to `30 seconds`.
+    var timeoutInterval: TimeInterval = 30
+    
+    /// Set this to `true` if you want Alamofire looks for the certificates in the app bundle. It defaults to `false`.
+    var usePinnedCertificates = false
+    
+    /// Validates the host name against the first certificate in the certificate chain if `validateCertificateChain` is `true`. It defaults to `false`.
+    var validateHost = false
+    
+    /// Validates the certificate chain.
+    var validateCertificateChain = true
+    
+    /// A `Dictionary` to specify custom additional headers to be sent with the requests.
+    var headers = [String : String]()
+    
+    
+   
+    
+    func sessionManager(with configuration: URLSessionConfiguration) -> SessionManager {
+        let instance: SessionManager
+        
+        var headers = Alamofire.SessionManager.defaultHTTPHeaders
+        API.manager.headers.forEach { headers[$0] = $1 }
+        configuration.httpAdditionalHeaders = headers
+        configuration.timeoutIntervalForRequest = API.manager.timeoutInterval
+        
+        if API.manager.usePinnedCertificates {
+            let certificates = ServerTrustPolicy.certificates(in: Bundle.main)
+            let serverTrustPolicy = ServerTrustPolicy.pinCertificates(
+                certificates: certificates,
+                validateCertificateChain: API.manager.validateCertificateChain,
+                validateHost: API.manager.validateHost
+            )
+            
+            let serverTrustPolicies = [Path.BaseURL : serverTrustPolicy]
+            let serverTrustPolicyManager = ServerTrustPolicyManager(policies: serverTrustPolicies)
+            
+            instance = Alamofire.SessionManager(configuration: configuration, serverTrustPolicyManager: serverTrustPolicyManager)
+        } else {
+            instance = Alamofire.SessionManager(configuration: configuration)
+        }
+        
+        instance.startRequestsImmediately = false
+        return instance
+    }
+    
+}
+
+
+extension APISession {
+    
+    
+    
     func request<T>(with builder: RequestBuilder) -> AnyPublisher<T, APIError> where T: Decodable {
         
 //        let decoder = JSONDecoder()
