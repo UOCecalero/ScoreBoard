@@ -22,9 +22,11 @@ struct PlayerList: View {
                 List(self.viewModel.players) { player in
                     VStack{
                         HStack{
+                            Image(uiImage: )
+                                .resizable()
+                                .frame(width: 50, height: 50, alignment: .center)
+                                .scaledToFill()
                             Text(player.displayName?.capitalized ?? "")
-                            Text(player.birthdate ?? "")
-                            Text(player.nationality ?? "")
                         }
                     }
                  }

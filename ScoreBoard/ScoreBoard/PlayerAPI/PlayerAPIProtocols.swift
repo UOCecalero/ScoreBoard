@@ -13,7 +13,8 @@ protocol PlayerService {
     var apiSession: APIService {get}
     
     func getPlayerList(playerName: String) -> AnyPublisher<SMPlayerSearchResponseModel, APIError>
-    //func getPlayer(playerURL: String) -> AnyPublisher<Player, APIError>
+    func getPlayer(playerID: Int) -> AnyPublisher<Player, APIError>
+    func getPlayerImage(from url: String) -> AnyPublisher<UIImage, APIError>
 }
 
 extension PlayerService {
@@ -23,8 +24,13 @@ extension PlayerService {
             .eraseToAnyPublisher()
     }
     
-//    func getPlayer(platerURL: String) -> AnyPublisher<Player, APIError> {
-//        return apiSession.request(with: PlayerEndpoint.playerDetail(playerURL))
-//            .eraseToAnyPublisher()
-//    }
+    func getPlayer(playerID: Int) -> AnyPublisher<Player, APIError> {
+        return apiSession.request(with: PlayerEndpoint.playerDetail(playerID))
+            .eraseToAnyPublisher()
+    }
+    
+    func getPlayerImage(from url: String) -> AnyPublisher<UIImage, APIError>{
+        return apiSession.requestImage(with: url)
+                .eraseToAnyPublisher()
+    }
 }

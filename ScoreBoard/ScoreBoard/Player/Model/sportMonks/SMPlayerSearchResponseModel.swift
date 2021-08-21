@@ -11,7 +11,7 @@
 //
 //   let sMPlayerSearchResponseModel = try? newJSONDecoder().decode(SMPlayerSearchResponseModel.self, from: jsonData)
 
-import Foundation
+import UIKit
 
 // MARK: - SMPlayerSearchResponseModel
 struct SMPlayerSearchResponseModel: Codable {
