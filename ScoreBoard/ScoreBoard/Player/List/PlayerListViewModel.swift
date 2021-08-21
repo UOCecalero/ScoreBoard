@@ -10,47 +10,60 @@ import Foundation
 import Combine
 
 
-class PlayerListViewModel: ObservableObject, PlayerService {
+//protocol PlayerService {
+//    var apiSession: APIService {get}
+//
+//    func getPlayerList(playerName: String) -> AnyPublisher<SMPlayerSearchResponseModel, APIError>
+//    //func getPlayer(playerURL: String) -> AnyPublisher<Player, APIError>
+//}
+//
+//extension PlayerService {
+//
+//    func getPlayerList(playerName: String) -> AnyPublisher<SMPlayerSearchResponseModel, APIError> {
+//        return apiSession.request(with: PlayerEndpoint.sportMonksPlayerSearchByName(playerName))
+//            .eraseToAnyPublisher()
+//    }
+//
+////    func getPlayer(platerURL: String) -> AnyPublisher<Player, APIError> {
+////        return apiSession.request(with: PlayerEndpoint.playerDetail(playerURL))
+////            .eraseToAnyPublisher()
+////    }
+//}
+
+class PlayerListViewModel: ObservableObject {
     
     @Published var players = [SMPlayer]()
     @Published var playerName = "" {
         didSet{
-            
             getPlayerList()
             print(playerName)
         }
     }
     
-    var apiSession: APIService
-    var cancellables = Set<AnyCancellable>()
+    var apiSession: SharedAPI?
+    var subcriptions = Set<AnyCancellable>()
     
-    init(apiSession: APIService = APISession()) {
+    init(apiSession: SharedAPI = .manager) {
         self.apiSession = apiSession
     }
     
     func getPlayerList() {
-        let cancellable = self.getPlayerList(playerName: playerName.trimmingCharacters(in: .whitespacesAndNewlines))
-            .sink(receiveCompletion: { result in
-                switch result {
-                case .failure(let error):
-                    switch error {
-                    case .decodingError(let description):
-                         print("Handle error: DecodingError -> \(description ?? "") ")
-                        break
-                    case .httpError(let errorNumber):
-                        print("Handle error: httpError -> \(errorNumber) ")
-                        break
-                    default:
-                         print("Handle error: \(error) ")
-                    }
-                   
-                case .finished:
-                    break
+        let cancellable = apiSession?.requestObjectPublisher(Endpoints
+                                                                .sportMonksPlayerSearchByName(playerName
+                                                                                                .replacingOccurrences(of: " ", with: "")
+                                                                                                .trimmingCharacters(in: .whitespacesAndNewlines)),
+                                                             responseType: SMPlayerSearchResponseModel.self)
+            
+            .retry(3)
+            .compactMap { $0.data }
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    //TODO: Error handling
+                    debugPrint(error)
                 }
-                
-            }) { (response) in
-                self.players = response.data ?? []
-        }
-        cancellables.insert(cancellable)
+            }, receiveValue: { players in
+                self.players = players
+            })
+            .store(in: &subcriptions)
     }
 }

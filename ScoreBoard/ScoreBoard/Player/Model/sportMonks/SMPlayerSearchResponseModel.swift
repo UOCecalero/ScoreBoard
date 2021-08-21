@@ -22,9 +22,10 @@ struct SMPlayerSearchResponseModel: Codable {
 // MARK: - Datum
 struct SMPlayer: Codable, Identifiable {
     
-    var id: Int { playerID }
-    
-    let playerID, teamID, countryID: Int
+    let id = UUID()
+
+    let playerID: Int32
+    let teamID, countryID: Int?
     let positionID: Int?
     let commonName, displayName, fullname, firstname: String?
     let lastname, nationality: String?
