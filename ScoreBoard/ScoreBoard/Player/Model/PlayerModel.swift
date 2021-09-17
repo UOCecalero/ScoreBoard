@@ -15,13 +15,13 @@ import Foundation
 
 // MARK: - Player
 struct PlayerModel: Codable {
-    let playerID: Int
-    let playerName, firstname, lastname: String
+    let playerID: Int?
+    let playerName, firstname, lastname: String?
     let number: JSONNull?
-    let position: String
-    let age: Int
+    let position: String?
+    let age: Int?
     let birthDate, birthPlace, birthCountry, nationality: JSONNull?
-    let height, weight: String
+    let height, weight: String?
 
     enum CodingKeys: String, CodingKey {
         case playerID

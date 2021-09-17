@@ -8,6 +8,10 @@
 
 import UIKit
 import SwiftUI
+import Firebase
+import FirebaseAuthUI
+import FirebaseEmailAuthUI
+import FirebasePhoneAuthUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,13 +23,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            
+            let firebaseViewController = self.firebaseConfig()
+            window.rootViewController = firebaseViewController
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -60,5 +64,59 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+}
+
+extension SceneDelegate: FUIAuthDelegate {
+    
+    fileprivate func firebaseConfig() -> UINavigationController? {
+        FirebaseApp.configure()
+        
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        
+        let emailAuth = emailProviderConstructor()
+
+        let providers: [FUIAuthProvider] = [
+            emailAuth,
+            FUIPhoneAuth(authUI: FUIAuth.defaultAuthUI()!)
+        ]
+        authUI?.providers = providers
+        return authUI?.authViewController()
+    }
+            
+    fileprivate func emailProviderConstructor() -> FUIEmailAuth {
+//            var actionCodeSettings = ActionCodeSettings()
+//            actionCodeSettings.url = URL(string: "https://www.iflet.tech")
+//            actionCodeSettings.handleCodeInApp = true
+//            actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+        
+        return FUIEmailAuth(authAuthUI: FUIAuth.defaultAuthUI()!,
+                            signInMethod: EmailPasswordAuthSignInMethod, //EmailLinkAuthSignInMethod
+                            forceSameDevice: false,
+                            allowNewEmailAccounts: true,
+                            actionCodeSetting: ActionCodeSettings())
+        }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        guard error == nil,
+        let authDataResult = authDataResult
+        else {
+            let alert = UIAlertController(title: "ERROR", message: "\(error.debugDescription)", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.window?.topMostViewController.present(alert, animated: true, completion: nil)
+            return
+        }
+    
+        //TODO: Send email to check verification
+//        guard authDataResult.user.isEmailVerified else {
+//            let alert = UIAlertController(title: "WARNING", message: "Please verify your email to get access", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//            self.window?.topMostViewController.present(alert, animated: true, completion: nil)
+//            return
+//        }
+        
+        let mainView = MainView()
+        window?.rootViewController = UIHostingController(rootView: mainView)
+    }
 }
 
