@@ -32,11 +32,9 @@
 		6BBAE12326B72058004FDD8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBAE12226B72058004FDD8D /* MainView.swift */; };
 		6BC8D3CD26890A350010D378 /* ApisportsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D3CC26890A350010D378 /* ApisportsAPICall.swift */; };
 		6BC8D3D126890A690010D378 /* SportsMonksAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D3D026890A690010D378 /* SportsMonksAPICall.swift */; };
-		B1EDE0D8A77D1C7511455849 /* Pods_ScoreBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9DBC1AC03091EF3FB38CE4 /* Pods_ScoreBoard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A55DCF69D76E300F50F84FB /* Pods-ScoreBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreBoard.debug.xcconfig"; path = "Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		341BE4F024EEF8680013FF29 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		341BE4F224EF02770013FF29 /* AutoColorRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoColorRing.swift; sourceTree = "<group>"; };
 		3462625624EB021E00C58F90 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
@@ -65,8 +63,6 @@
 		6BC8D3CC26890A350010D378 /* ApisportsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApisportsAPICall.swift; sourceTree = "<group>"; };
 		6BC8D3D026890A690010D378 /* SportsMonksAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsMonksAPICall.swift; sourceTree = "<group>"; };
 		6BD81BAF26933CFF0018AF33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6F9DBC1AC03091EF3FB38CE4 /* Pods_ScoreBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0B18F44AD744603CFBBCA15 /* Pods-ScoreBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreBoard.release.xcconfig"; path = "Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1EDE0D8A77D1C7511455849 /* Pods_ScoreBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +92,6 @@
 				347E566E24DF14520067F5AB /* ScoreBoard */,
 				347E566D24DF14520067F5AB /* Products */,
 				F9ECB9214E1BD5050B6A352D /* Pods */,
-				4F40AAB0E39C695E75EA61B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,14 +195,6 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		4F40AAB0E39C695E75EA61B5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6F9DBC1AC03091EF3FB38CE4 /* Pods_ScoreBoard.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6B103BB926A9C77E00E32449 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +233,6 @@
 		F9ECB9214E1BD5050B6A352D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0A55DCF69D76E300F50F84FB /* Pods-ScoreBoard.debug.xcconfig */,
-				F0B18F44AD744603CFBBCA15 /* Pods-ScoreBoard.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -260,11 +244,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 347E568024DF14550067F5AB /* Build configuration list for PBXNativeTarget "ScoreBoard" */;
 			buildPhases = (
-				476AC4A8CD10C086C91D0F1C /* [CP] Check Pods Manifest.lock */,
 				347E566824DF14520067F5AB /* Sources */,
 				347E566924DF14520067F5AB /* Frameworks */,
 				347E566A24DF14520067F5AB /* Resources */,
-				B0A7D4913E21E30C34DC8047 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,48 +304,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		476AC4A8CD10C086C91D0F1C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ScoreBoard-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0A7D4913E21E30C34DC8047 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		347E566824DF14520067F5AB /* Sources */ = {
@@ -527,7 +467,6 @@
 		};
 		347E568124DF14550067F5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A55DCF69D76E300F50F84FB /* Pods-ScoreBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,7 +488,6 @@
 		};
 		347E568224DF14550067F5AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0B18F44AD744603CFBBCA15 /* Pods-ScoreBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
