@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  ScoreBoardApp.swift
 //  ScoreBoard
 //
 //  Created by Edu Calero on 08/08/2020.
@@ -10,14 +10,18 @@ import SwiftUI
 import Firebase
 
 @main
-struct PectBagessApp: App {
+struct ScoreBoardApp: App {
+    
+    let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     @StateObject var appStateViewModel = AppStateViewModel()
 
     var body: some Scene {
         WindowGroup {
             AppContainerView()
                     .environmentObject(appStateViewModel)
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

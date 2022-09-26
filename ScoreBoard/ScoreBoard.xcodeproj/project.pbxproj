@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		341BE4F124EEF8680013FF29 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BE4F024EEF8680013FF29 /* RingView.swift */; };
 		341BE4F324EF02770013FF29 /* AutoColorRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BE4F224EF02770013FF29 /* AutoColorRing.swift */; };
-		347E567024DF14520067F5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E566F24DF14520067F5AB /* AppDelegate.swift */; };
+		347E567024DF14520067F5AB /* ScoreBoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E566F24DF14520067F5AB /* ScoreBoardApp.swift */; };
 		347E567624DF14550067F5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347E567524DF14550067F5AB /* Assets.xcassets */; };
 		347E567924DF14550067F5AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347E567824DF14550067F5AB /* Preview Assets.xcassets */; };
 		347E567C24DF14550067F5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347E567A24DF14550067F5AB /* LaunchScreen.storyboard */; };
@@ -36,6 +36,7 @@
 		6B5D6CF328E0CB2700D76719 /* CircuitRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF228E0CB2700D76719 /* CircuitRealmModel.swift */; };
 		6B5D6CF528E0D06900D76719 /* AppContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF428E0D06900D76719 /* AppContainerView.swift */; };
 		6B5D6CF828E0D14500D76719 /* AppStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */; };
+		6B5D6D1C28E1A25F00D76719 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6D1B28E1A25F00D76719 /* Persistence.swift */; };
 		6B9E1BD326AC722D00A9D6D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */; };
 		6BB2A8E128D63F9100E0E504 /* RaceResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D628D63F9100E0E504 /* RaceResults.swift */; };
 		6BB2A8E228D63F9100E0E504 /* PitStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D728D63F9100E0E504 /* PitStops.swift */; };
@@ -67,7 +68,7 @@
 		341BE4F024EEF8680013FF29 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		341BE4F224EF02770013FF29 /* AutoColorRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoColorRing.swift; sourceTree = "<group>"; };
 		347E566C24DF14520067F5AB /* ScoreBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		347E566F24DF14520067F5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		347E566F24DF14520067F5AB /* ScoreBoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardApp.swift; sourceTree = "<group>"; };
 		347E567524DF14550067F5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347E567824DF14550067F5AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		347E567B24DF14550067F5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		6B5D6CF228E0CB2700D76719 /* CircuitRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitRealmModel.swift; sourceTree = "<group>"; };
 		6B5D6CF428E0D06900D76719 /* AppContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerView.swift; sourceTree = "<group>"; };
 		6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
+		6B5D6D1B28E1A25F00D76719 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6BB2A8D628D63F9100E0E504 /* RaceResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceResults.swift; sourceTree = "<group>"; };
 		6BB2A8D728D63F9100E0E504 /* PitStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitStops.swift; sourceTree = "<group>"; };
@@ -163,6 +165,8 @@
 		347E566E24DF14520067F5AB /* ScoreBoard */ = {
 			isa = PBXGroup;
 			children = (
+				347E566F24DF14520067F5AB /* ScoreBoardApp.swift */,
+				6B5D6D1A28E1A24400D76719 /* CoreData */,
 				6B5D6CE628DF682400D76719 /* Models */,
 				6BDE65CD28DB9FB100592031 /* Libraries */,
 				6BDE65CC28DB9FAB00592031 /* Helpers */,
@@ -170,7 +174,6 @@
 				6BDE65CF28DBA00300592031 /* Endpoints */,
 				349E920E24EC54F800D43A8A /* RestManager */,
 				349E920924EC539300D43A8A /* API */,
-				347E566F24DF14520067F5AB /* AppDelegate.swift */,
 				347E567524DF14550067F5AB /* Assets.xcassets */,
 				347E567A24DF14550067F5AB /* LaunchScreen.storyboard */,
 				347E567D24DF14550067F5AB /* Info.plist */,
@@ -289,6 +292,14 @@
 				6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */,
 			);
 			path = AppContainer;
+			sourceTree = "<group>";
+		};
+		6B5D6D1A28E1A24400D76719 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D6D1B28E1A25F00D76719 /* Persistence.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		6BB2A8D528D63F9100E0E504 /* JSONs */ = {
@@ -468,9 +479,10 @@
 				6BB2A8E328D63F9100E0E504 /* DriverStandings.swift in Sources */,
 				6BDE65D128DBA04900592031 /* ErgastAPI.swift in Sources */,
 				6B103BB726A9C72D00E32449 /* RequestBuilderProtocol.swift in Sources */,
-				347E567024DF14520067F5AB /* AppDelegate.swift in Sources */,
+				347E567024DF14520067F5AB /* ScoreBoardApp.swift in Sources */,
 				341BE4F124EEF8680013FF29 /* RingView.swift in Sources */,
 				6BB2A8E528D63F9100E0E504 /* Laps.swift in Sources */,
+				6B5D6D1C28E1A25F00D76719 /* Persistence.swift in Sources */,
 				6B5D6CE528DF679E00D76719 /* ConstructorsModelLogic.swift in Sources */,
 				6B5D6CDB28DF5A2B00D76719 /* DriversModelLogic.swift in Sources */,
 				6BB2A8E628D63F9100E0E504 /* Drivers.swift in Sources */,
