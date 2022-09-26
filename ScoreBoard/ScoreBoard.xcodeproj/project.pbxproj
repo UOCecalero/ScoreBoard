@@ -3,70 +3,114 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		341BE4F124EEF8680013FF29 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BE4F024EEF8680013FF29 /* RingView.swift */; };
 		341BE4F324EF02770013FF29 /* AutoColorRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BE4F224EF02770013FF29 /* AutoColorRing.swift */; };
-		3462625724EB021E00C58F90 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3462625624EB021E00C58F90 /* PlayerList.swift */; };
-		3462625924EB0C7900C58F90 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3462625824EB0C7900C58F90 /* PlayerModel.swift */; };
 		347E567024DF14520067F5AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E566F24DF14520067F5AB /* AppDelegate.swift */; };
-		347E567224DF14520067F5AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E567124DF14520067F5AB /* SceneDelegate.swift */; };
-		347E567424DF14520067F5AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E567324DF14520067F5AB /* ContentView.swift */; };
 		347E567624DF14550067F5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347E567524DF14550067F5AB /* Assets.xcassets */; };
 		347E567924DF14550067F5AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347E567824DF14550067F5AB /* Preview Assets.xcassets */; };
 		347E567C24DF14550067F5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347E567A24DF14550067F5AB /* LaunchScreen.storyboard */; };
-		3497431A24ED69EC00048315 /* SMPlayerSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497431924ED69EB00048315 /* SMPlayerSearchResponseModel.swift */; };
-		349E920824EB109500D43A8A /* PlayerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E920724EB109500D43A8A /* PlayerResponseModel.swift */; };
 		349E920B24EC53D400D43A8A /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E920A24EC53D400D43A8A /* APISession.swift */; };
 		349E920D24EC540D00D43A8A /* APIProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E920C24EC540D00D43A8A /* APIProtocols.swift */; };
-		349E921024EC55E400D43A8A /* PlayerAPIProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E920F24EC55E400D43A8A /* PlayerAPIProtocols.swift */; };
+		349E921024EC55E400D43A8A /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E920F24EC55E400D43A8A /* RestManager.swift */; };
 		349E921224EC56AE00D43A8A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E921124EC56AE00D43A8A /* Endpoints.swift */; };
-		349E921724EC580A00D43A8A /* PlayerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E921624EC580A00D43A8A /* PlayerListViewModel.swift */; };
-		34B51C6A24DF157B007D9108 /* PlayerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B51C6924DF157B007D9108 /* PlayerDetail.swift */; };
 		6B103BB726A9C72D00E32449 /* RequestBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B103BB626A9C72D00E32449 /* RequestBuilderProtocol.swift */; };
 		6B4B1D4E26B8428300BC7CCB /* ChampionshipPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */; };
+		6B5D6CCF28DF419800D76719 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CCE28DF419800D76719 /* RestError.swift */; };
+		6B5D6CD128DF4CF700D76719 /* PreLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */; };
+		6B5D6CD428DF4E4E00D76719 /* PreloaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CD328DF4E4E00D76719 /* PreloaderViewModel.swift */; };
+		6B5D6CD728DF5A0100D76719 /* RacesModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CD628DF5A0100D76719 /* RacesModelLogic.swift */; };
+		6B5D6CDB28DF5A2B00D76719 /* DriversModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CDA28DF5A2B00D76719 /* DriversModelLogic.swift */; };
+		6B5D6CDF28DF5F5600D76719 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6B5D6CDE28DF5F5600D76719 /* Realm */; };
+		6B5D6CE128DF5F5600D76719 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6B5D6CE028DF5F5600D76719 /* RealmSwift */; };
+		6B5D6CE328DF672000D76719 /* SeasonModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CE228DF672000D76719 /* SeasonModelLogic.swift */; };
+		6B5D6CE528DF679E00D76719 /* ConstructorsModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CE428DF679E00D76719 /* ConstructorsModelLogic.swift */; };
+		6B5D6CE928DF686700D76719 /* SeassonsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CE828DF686700D76719 /* SeassonsRealmModel.swift */; };
+		6B5D6CEB28DFB51D00D76719 /* ConstructorsRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CEA28DFB51C00D76719 /* ConstructorsRealmModel.swift */; };
+		6B5D6CED28DFB83800D76719 /* DriversRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CEC28DFB83800D76719 /* DriversRealmModel.swift */; };
+		6B5D6CEF28E0C48000D76719 /* RacesRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CEE28E0C48000D76719 /* RacesRealmModel.swift */; };
+		6B5D6CF128E0CB0400D76719 /* LocationRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF028E0CB0400D76719 /* LocationRealmModel.swift */; };
+		6B5D6CF328E0CB2700D76719 /* CircuitRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF228E0CB2700D76719 /* CircuitRealmModel.swift */; };
+		6B5D6CF528E0D06900D76719 /* AppContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF428E0D06900D76719 /* AppContainerView.swift */; };
+		6B5D6CF828E0D14500D76719 /* AppStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */; };
 		6B9E1BD326AC722D00A9D6D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */; };
-		6BBAE12026B71D1D004FDD8D /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBAE11F26B71D1D004FDD8D /* UIWindow.swift */; };
+		6BB2A8E128D63F9100E0E504 /* RaceResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D628D63F9100E0E504 /* RaceResults.swift */; };
+		6BB2A8E228D63F9100E0E504 /* PitStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D728D63F9100E0E504 /* PitStops.swift */; };
+		6BB2A8E328D63F9100E0E504 /* DriverStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D828D63F9100E0E504 /* DriverStandings.swift */; };
+		6BB2A8E428D63F9100E0E504 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D928D63F9100E0E504 /* Seasons.swift */; };
+		6BB2A8E528D63F9100E0E504 /* Laps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DA28D63F9100E0E504 /* Laps.swift */; };
+		6BB2A8E628D63F9100E0E504 /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DB28D63F9100E0E504 /* Drivers.swift */; };
+		6BB2A8E728D63F9100E0E504 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DC28D63F9100E0E504 /* Constructors.swift */; };
+		6BB2A8E828D63F9100E0E504 /* Circuits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DD28D63F9100E0E504 /* Circuits.swift */; };
+		6BB2A8E928D63F9100E0E504 /* RaceSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DE28D63F9100E0E504 /* RaceSchedule.swift */; };
+		6BB2A8EA28D63F9100E0E504 /* QualifyingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DF28D63F9100E0E504 /* QualifyingResults.swift */; };
+		6BB2A8EB28D63F9100E0E504 /* FinishingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8E028D63F9100E0E504 /* FinishingStatus.swift */; };
+		6BB2A8EE28D641DA00E0E504 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8ED28D641DA00E0E504 /* Alamofire */; };
+		6BB2A8F628D7A9FA00E0E504 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8F528D7A9FA00E0E504 /* FirebaseAnalyticsSwift */; };
+		6BB2A8F828D7A9FA00E0E504 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8F728D7A9FA00E0E504 /* FirebaseAuth */; };
+		6BB2A8FA28D7A9FA00E0E504 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8F928D7A9FA00E0E504 /* FirebaseCrashlytics */; };
+		6BB2A8FC28D7A9FA00E0E504 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8FB28D7A9FA00E0E504 /* FirebaseDynamicLinks */; };
+		6BB2A8FE28D7A9FA00E0E504 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8FD28D7A9FA00E0E504 /* FirebaseFirestoreSwift */; };
+		6BB2A90028D7A9FA00E0E504 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8FF28D7A9FA00E0E504 /* FirebaseInAppMessagingSwift-Beta */; };
+		6BB2A90228D7A9FA00E0E504 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A90128D7A9FA00E0E504 /* FirebaseRemoteConfigSwift */; };
 		6BBAE12326B72058004FDD8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBAE12226B72058004FDD8D /* MainView.swift */; };
 		6BC8D3CD26890A350010D378 /* ApisportsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D3CC26890A350010D378 /* ApisportsAPICall.swift */; };
 		6BC8D3D126890A690010D378 /* SportsMonksAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D3D026890A690010D378 /* SportsMonksAPICall.swift */; };
-		B1EDE0D8A77D1C7511455849 /* Pods_ScoreBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9DBC1AC03091EF3FB38CE4 /* Pods_ScoreBoard.framework */; };
+		6BDE65D128DBA04900592031 /* ErgastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE65D028DBA04900592031 /* ErgastAPI.swift */; };
+		6BDE65D428DBA15000592031 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE65D328DBA15000592031 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A55DCF69D76E300F50F84FB /* Pods-ScoreBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreBoard.debug.xcconfig"; path = "Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		341BE4F024EEF8680013FF29 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		341BE4F224EF02770013FF29 /* AutoColorRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoColorRing.swift; sourceTree = "<group>"; };
-		3462625624EB021E00C58F90 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
-		3462625824EB0C7900C58F90 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		347E566C24DF14520067F5AB /* ScoreBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347E566F24DF14520067F5AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		347E567124DF14520067F5AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		347E567324DF14520067F5AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		347E567524DF14550067F5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347E567824DF14550067F5AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		347E567B24DF14550067F5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347E567D24DF14550067F5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3497431924ED69EB00048315 /* SMPlayerSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPlayerSearchResponseModel.swift; sourceTree = "<group>"; };
-		349E920724EB109500D43A8A /* PlayerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerResponseModel.swift; sourceTree = "<group>"; };
 		349E920A24EC53D400D43A8A /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		349E920C24EC540D00D43A8A /* APIProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocols.swift; sourceTree = "<group>"; };
-		349E920F24EC55E400D43A8A /* PlayerAPIProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAPIProtocols.swift; sourceTree = "<group>"; };
+		349E920F24EC55E400D43A8A /* RestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		349E921124EC56AE00D43A8A /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		349E921624EC580A00D43A8A /* PlayerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewModel.swift; sourceTree = "<group>"; };
-		34B51C6924DF157B007D9108 /* PlayerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetail.swift; sourceTree = "<group>"; };
 		6B103BB626A9C72D00E32449 /* RequestBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderProtocol.swift; sourceTree = "<group>"; };
 		6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipPath.swift; sourceTree = "<group>"; };
+		6B5D6CCE28DF419800D76719 /* RestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
+		6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoaderView.swift; sourceTree = "<group>"; };
+		6B5D6CD328DF4E4E00D76719 /* PreloaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderViewModel.swift; sourceTree = "<group>"; };
+		6B5D6CD628DF5A0100D76719 /* RacesModelLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesModelLogic.swift; sourceTree = "<group>"; };
+		6B5D6CDA28DF5A2B00D76719 /* DriversModelLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversModelLogic.swift; sourceTree = "<group>"; };
+		6B5D6CE228DF672000D76719 /* SeasonModelLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonModelLogic.swift; sourceTree = "<group>"; };
+		6B5D6CE428DF679E00D76719 /* ConstructorsModelLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorsModelLogic.swift; sourceTree = "<group>"; };
+		6B5D6CE828DF686700D76719 /* SeassonsRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeassonsRealmModel.swift; sourceTree = "<group>"; };
+		6B5D6CEA28DFB51C00D76719 /* ConstructorsRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorsRealmModel.swift; sourceTree = "<group>"; };
+		6B5D6CEC28DFB83800D76719 /* DriversRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversRealmModel.swift; sourceTree = "<group>"; };
+		6B5D6CEE28E0C48000D76719 /* RacesRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesRealmModel.swift; sourceTree = "<group>"; };
+		6B5D6CF028E0CB0400D76719 /* LocationRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRealmModel.swift; sourceTree = "<group>"; };
+		6B5D6CF228E0CB2700D76719 /* CircuitRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitRealmModel.swift; sourceTree = "<group>"; };
+		6B5D6CF428E0D06900D76719 /* AppContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerView.swift; sourceTree = "<group>"; };
+		6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
 		6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6BBAE11F26B71D1D004FDD8D /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		6BB2A8D628D63F9100E0E504 /* RaceResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceResults.swift; sourceTree = "<group>"; };
+		6BB2A8D728D63F9100E0E504 /* PitStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitStops.swift; sourceTree = "<group>"; };
+		6BB2A8D828D63F9100E0E504 /* DriverStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverStandings.swift; sourceTree = "<group>"; };
+		6BB2A8D928D63F9100E0E504 /* Seasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; };
+		6BB2A8DA28D63F9100E0E504 /* Laps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Laps.swift; sourceTree = "<group>"; };
+		6BB2A8DB28D63F9100E0E504 /* Drivers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
+		6BB2A8DC28D63F9100E0E504 /* Constructors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constructors.swift; sourceTree = "<group>"; };
+		6BB2A8DD28D63F9100E0E504 /* Circuits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circuits.swift; sourceTree = "<group>"; };
+		6BB2A8DE28D63F9100E0E504 /* RaceSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceSchedule.swift; sourceTree = "<group>"; };
+		6BB2A8DF28D63F9100E0E504 /* QualifyingResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualifyingResults.swift; sourceTree = "<group>"; };
+		6BB2A8E028D63F9100E0E504 /* FinishingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishingStatus.swift; sourceTree = "<group>"; };
 		6BBAE12226B72058004FDD8D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6BC8D3CC26890A350010D378 /* ApisportsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApisportsAPICall.swift; sourceTree = "<group>"; };
 		6BC8D3D026890A690010D378 /* SportsMonksAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsMonksAPICall.swift; sourceTree = "<group>"; };
 		6BD81BAF26933CFF0018AF33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6F9DBC1AC03091EF3FB38CE4 /* Pods_ScoreBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScoreBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0B18F44AD744603CFBBCA15 /* Pods-ScoreBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreBoard.release.xcconfig"; path = "Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard.release.xcconfig"; sourceTree = "<group>"; };
+		6BDE65D028DBA04900592031 /* ErgastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErgastAPI.swift; sourceTree = "<group>"; };
+		6BDE65D328DBA15000592031 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +118,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1EDE0D8A77D1C7511455849 /* Pods_ScoreBoard.framework in Frameworks */,
+				6BB2A8F628D7A9FA00E0E504 /* FirebaseAnalyticsSwift in Frameworks */,
+				6BB2A90228D7A9FA00E0E504 /* FirebaseRemoteConfigSwift in Frameworks */,
+				6BB2A8FA28D7A9FA00E0E504 /* FirebaseCrashlytics in Frameworks */,
+				6BB2A90028D7A9FA00E0E504 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				6BB2A8F828D7A9FA00E0E504 /* FirebaseAuth in Frameworks */,
+				6BB2A8EE28D641DA00E0E504 /* Alamofire in Frameworks */,
+				6B5D6CDF28DF5F5600D76719 /* Realm in Frameworks */,
+				6BB2A8FC28D7A9FA00E0E504 /* FirebaseDynamicLinks in Frameworks */,
+				6B5D6CE128DF5F5600D76719 /* RealmSwift in Frameworks */,
+				6BB2A8FE28D7A9FA00E0E504 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +149,6 @@
 				6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */,
 				347E566E24DF14520067F5AB /* ScoreBoard */,
 				347E566D24DF14520067F5AB /* Products */,
-				F9ECB9214E1BD5050B6A352D /* Pods */,
-				4F40AAB0E39C695E75EA61B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,18 +163,18 @@
 		347E566E24DF14520067F5AB /* ScoreBoard */ = {
 			isa = PBXGroup;
 			children = (
+				6B5D6CE628DF682400D76719 /* Models */,
+				6BDE65CD28DB9FB100592031 /* Libraries */,
+				6BDE65CC28DB9FAB00592031 /* Helpers */,
 				6BBAE12126B72031004FDD8D /* Views */,
-				349E921324EC570400D43A8A /* Player */,
-				349E920E24EC54F800D43A8A /* PlayerAPI */,
+				6BDE65CF28DBA00300592031 /* Endpoints */,
+				349E920E24EC54F800D43A8A /* RestManager */,
 				349E920924EC539300D43A8A /* API */,
 				347E566F24DF14520067F5AB /* AppDelegate.swift */,
-				347E567124DF14520067F5AB /* SceneDelegate.swift */,
-				347E567324DF14520067F5AB /* ContentView.swift */,
 				347E567524DF14550067F5AB /* Assets.xcassets */,
 				347E567A24DF14550067F5AB /* LaunchScreen.storyboard */,
 				347E567D24DF14550067F5AB /* Info.plist */,
 				347E567724DF14550067F5AB /* Preview Content */,
-				6BBAE11E26B71CE2004FDD8D /* Extensions */,
 			);
 			path = ScoreBoard;
 			sourceTree = "<group>";
@@ -134,14 +185,6 @@
 				347E567824DF14550067F5AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		3497431824ED69A100048315 /* sportMonks */ = {
-			isa = PBXGroup;
-			children = (
-				3497431924ED69EB00048315 /* SMPlayerSearchResponseModel.swift */,
-			);
-			path = sportMonks;
 			sourceTree = "<group>";
 		};
 		349E920924EC539300D43A8A /* API */ = {
@@ -155,79 +198,122 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		349E920E24EC54F800D43A8A /* PlayerAPI */ = {
+		349E920E24EC54F800D43A8A /* RestManager */ = {
 			isa = PBXGroup;
 			children = (
-				349E920F24EC55E400D43A8A /* PlayerAPIProtocols.swift */,
+				349E920F24EC55E400D43A8A /* RestManager.swift */,
+				6B5D6CCD28DF414000D76719 /* Errors */,
+				6B5D6CCC28DF413600D76719 /* Protocols */,
 			);
-			path = PlayerAPI;
-			sourceTree = "<group>";
-		};
-		349E921324EC570400D43A8A /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				341BE4EF24EEF8510013FF29 /* Views */,
-				349E921824EC5DBC00D43A8A /* Detail */,
-				349E921524EC57F100D43A8A /* List */,
-				349E921424EC571600D43A8A /* Model */,
-			);
-			path = Player;
-			sourceTree = "<group>";
-		};
-		349E921424EC571600D43A8A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3497431824ED69A100048315 /* sportMonks */,
-				349E920724EB109500D43A8A /* PlayerResponseModel.swift */,
-				3462625824EB0C7900C58F90 /* PlayerModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		349E921524EC57F100D43A8A /* List */ = {
-			isa = PBXGroup;
-			children = (
-				3462625624EB021E00C58F90 /* PlayerList.swift */,
-				349E921624EC580A00D43A8A /* PlayerListViewModel.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		349E921824EC5DBC00D43A8A /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				34B51C6924DF157B007D9108 /* PlayerDetail.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		4F40AAB0E39C695E75EA61B5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6F9DBC1AC03091EF3FB38CE4 /* Pods_ScoreBoard.framework */,
-			);
-			name = Frameworks;
+			path = RestManager;
 			sourceTree = "<group>";
 		};
 		6B103BB926A9C77E00E32449 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
-				6B103BB626A9C72D00E32449 /* RequestBuilderProtocol.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
 		};
-		6BBAE11E26B71CE2004FDD8D /* Extensions */ = {
+		6B5D6CCC28DF413600D76719 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				6BBAE11F26B71D1D004FDD8D /* UIWindow.swift */,
+				6B103BB626A9C72D00E32449 /* RequestBuilderProtocol.swift */,
 			);
-			path = Extensions;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6B5D6CCD28DF414000D76719 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D6CCE28DF419800D76719 /* RestError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		6B5D6CD228DF4E3A00D76719 /* Preloader */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */,
+				6B5D6CD328DF4E4E00D76719 /* PreloaderViewModel.swift */,
+			);
+			path = Preloader;
+			sourceTree = "<group>";
+		};
+		6B5D6CD528DF59D600D76719 /* ModelLogic */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D6CDC28DF5A9600D76719 /* Protocols */,
+				6B5D6CE228DF672000D76719 /* SeasonModelLogic.swift */,
+				6B5D6CE428DF679E00D76719 /* ConstructorsModelLogic.swift */,
+				6B5D6CDA28DF5A2B00D76719 /* DriversModelLogic.swift */,
+				6B5D6CD628DF5A0100D76719 /* RacesModelLogic.swift */,
+			);
+			path = ModelLogic;
+			sourceTree = "<group>";
+		};
+		6B5D6CDC28DF5A9600D76719 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6B5D6CE628DF682400D76719 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BB2A8D528D63F9100E0E504 /* JSONs */,
+				6B5D6CE728DF684F00D76719 /* RealmModels */,
+				6B5D6CD528DF59D600D76719 /* ModelLogic */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B5D6CE728DF684F00D76719 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D6CE828DF686700D76719 /* SeassonsRealmModel.swift */,
+				6B5D6CEA28DFB51C00D76719 /* ConstructorsRealmModel.swift */,
+				6B5D6CEC28DFB83800D76719 /* DriversRealmModel.swift */,
+				6B5D6CEE28E0C48000D76719 /* RacesRealmModel.swift */,
+				6B5D6CF228E0CB2700D76719 /* CircuitRealmModel.swift */,
+				6B5D6CF028E0CB0400D76719 /* LocationRealmModel.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		6B5D6CF628E0D0F900D76719 /* AppContainer */ = {
+			isa = PBXGroup;
+			children = (
+				6B5D6CF428E0D06900D76719 /* AppContainerView.swift */,
+				6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */,
+			);
+			path = AppContainer;
+			sourceTree = "<group>";
+		};
+		6BB2A8D528D63F9100E0E504 /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				6BB2A8D628D63F9100E0E504 /* RaceResults.swift */,
+				6BB2A8D728D63F9100E0E504 /* PitStops.swift */,
+				6BB2A8D828D63F9100E0E504 /* DriverStandings.swift */,
+				6BB2A8D928D63F9100E0E504 /* Seasons.swift */,
+				6BB2A8DA28D63F9100E0E504 /* Laps.swift */,
+				6BB2A8DB28D63F9100E0E504 /* Drivers.swift */,
+				6BB2A8DC28D63F9100E0E504 /* Constructors.swift */,
+				6BB2A8DD28D63F9100E0E504 /* Circuits.swift */,
+				6BB2A8DE28D63F9100E0E504 /* RaceSchedule.swift */,
+				6BB2A8DF28D63F9100E0E504 /* QualifyingResults.swift */,
+				6BB2A8E028D63F9100E0E504 /* FinishingStatus.swift */,
+			);
+			path = JSONs;
 			sourceTree = "<group>";
 		};
 		6BBAE12126B72031004FDD8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B5D6CF628E0D0F900D76719 /* AppContainer */,
+				6B5D6CD228DF4E3A00D76719 /* Preloader */,
 				6BBAE12226B72058004FDD8D /* MainView.swift */,
 				6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */,
 			);
@@ -244,13 +330,36 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		F9ECB9214E1BD5050B6A352D /* Pods */ = {
+		6BDE65CC28DB9FAB00592031 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0A55DCF69D76E300F50F84FB /* Pods-ScoreBoard.debug.xcconfig */,
-				F0B18F44AD744603CFBBCA15 /* Pods-ScoreBoard.release.xcconfig */,
+				6BDE65D228DBA13600592031 /* Constants */,
 			);
-			path = Pods;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6BDE65CD28DB9FB100592031 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				341BE4EF24EEF8510013FF29 /* Views */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		6BDE65CF28DBA00300592031 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				6BDE65D028DBA04900592031 /* ErgastAPI.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		6BDE65D228DBA13600592031 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6BDE65D328DBA15000592031 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,17 +369,27 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 347E568024DF14550067F5AB /* Build configuration list for PBXNativeTarget "ScoreBoard" */;
 			buildPhases = (
-				476AC4A8CD10C086C91D0F1C /* [CP] Check Pods Manifest.lock */,
 				347E566824DF14520067F5AB /* Sources */,
 				347E566924DF14520067F5AB /* Frameworks */,
 				347E566A24DF14520067F5AB /* Resources */,
-				B0A7D4913E21E30C34DC8047 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ScoreBoard;
+			packageProductDependencies = (
+				6BB2A8ED28D641DA00E0E504 /* Alamofire */,
+				6BB2A8F528D7A9FA00E0E504 /* FirebaseAnalyticsSwift */,
+				6BB2A8F728D7A9FA00E0E504 /* FirebaseAuth */,
+				6BB2A8F928D7A9FA00E0E504 /* FirebaseCrashlytics */,
+				6BB2A8FB28D7A9FA00E0E504 /* FirebaseDynamicLinks */,
+				6BB2A8FD28D7A9FA00E0E504 /* FirebaseFirestoreSwift */,
+				6BB2A8FF28D7A9FA00E0E504 /* FirebaseInAppMessagingSwift-Beta */,
+				6BB2A90128D7A9FA00E0E504 /* FirebaseRemoteConfigSwift */,
+				6B5D6CDE28DF5F5600D76719 /* Realm */,
+				6B5D6CE028DF5F5600D76719 /* RealmSwift */,
+			);
 			productName = ScoreBoard;
 			productReference = 347E566C24DF14520067F5AB /* ScoreBoard.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +419,11 @@
 				es,
 			);
 			mainGroup = 347E566324DF14520067F5AB;
+			packageReferences = (
+				6BB2A8EC28D641DA00E0E504 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6B5D6CDD28DF5F5600D76719 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 347E566D24DF14520067F5AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,74 +447,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		476AC4A8CD10C086C91D0F1C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ScoreBoard-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0A7D4913E21E30C34DC8047 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScoreBoard/Pods-ScoreBoard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		347E566824DF14520067F5AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3462625924EB0C7900C58F90 /* PlayerModel.swift in Sources */,
+				6B5D6CEF28E0C48000D76719 /* RacesRealmModel.swift in Sources */,
 				6BC8D3D126890A690010D378 /* SportsMonksAPICall.swift in Sources */,
+				6BB2A8EA28D63F9100E0E504 /* QualifyingResults.swift in Sources */,
+				6B5D6CE928DF686700D76719 /* SeassonsRealmModel.swift in Sources */,
+				6B5D6CED28DFB83800D76719 /* DriversRealmModel.swift in Sources */,
+				6B5D6CD428DF4E4E00D76719 /* PreloaderViewModel.swift in Sources */,
+				6B5D6CEB28DFB51D00D76719 /* ConstructorsRealmModel.swift in Sources */,
 				349E920B24EC53D400D43A8A /* APISession.swift in Sources */,
-				6BBAE12026B71D1D004FDD8D /* UIWindow.swift in Sources */,
+				6B5D6CD128DF4CF700D76719 /* PreLoaderView.swift in Sources */,
+				6BB2A8E828D63F9100E0E504 /* Circuits.swift in Sources */,
+				6BB2A8E128D63F9100E0E504 /* RaceResults.swift in Sources */,
 				349E921224EC56AE00D43A8A /* Endpoints.swift in Sources */,
 				341BE4F324EF02770013FF29 /* AutoColorRing.swift in Sources */,
+				6BB2A8E328D63F9100E0E504 /* DriverStandings.swift in Sources */,
+				6BDE65D128DBA04900592031 /* ErgastAPI.swift in Sources */,
 				6B103BB726A9C72D00E32449 /* RequestBuilderProtocol.swift in Sources */,
 				347E567024DF14520067F5AB /* AppDelegate.swift in Sources */,
 				341BE4F124EEF8680013FF29 /* RingView.swift in Sources */,
-				349E921024EC55E400D43A8A /* PlayerAPIProtocols.swift in Sources */,
-				349E921724EC580A00D43A8A /* PlayerListViewModel.swift in Sources */,
+				6BB2A8E528D63F9100E0E504 /* Laps.swift in Sources */,
+				6B5D6CE528DF679E00D76719 /* ConstructorsModelLogic.swift in Sources */,
+				6B5D6CDB28DF5A2B00D76719 /* DriversModelLogic.swift in Sources */,
+				6BB2A8E628D63F9100E0E504 /* Drivers.swift in Sources */,
+				6B5D6CF128E0CB0400D76719 /* LocationRealmModel.swift in Sources */,
+				6B5D6CF528E0D06900D76719 /* AppContainerView.swift in Sources */,
+				349E921024EC55E400D43A8A /* RestManager.swift in Sources */,
+				6BB2A8E228D63F9100E0E504 /* PitStops.swift in Sources */,
 				349E920D24EC540D00D43A8A /* APIProtocols.swift in Sources */,
-				349E920824EB109500D43A8A /* PlayerResponseModel.swift in Sources */,
+				6BB2A8EB28D63F9100E0E504 /* FinishingStatus.swift in Sources */,
+				6BB2A8E728D63F9100E0E504 /* Constructors.swift in Sources */,
 				6B4B1D4E26B8428300BC7CCB /* ChampionshipPath.swift in Sources */,
 				6BBAE12326B72058004FDD8D /* MainView.swift in Sources */,
-				3462625724EB021E00C58F90 /* PlayerList.swift in Sources */,
-				34B51C6A24DF157B007D9108 /* PlayerDetail.swift in Sources */,
+				6B5D6CE328DF672000D76719 /* SeasonModelLogic.swift in Sources */,
+				6B5D6CF828E0D14500D76719 /* AppStateViewModel.swift in Sources */,
+				6BB2A8E428D63F9100E0E504 /* Seasons.swift in Sources */,
 				6BC8D3CD26890A350010D378 /* ApisportsAPICall.swift in Sources */,
-				3497431A24ED69EC00048315 /* SMPlayerSearchResponseModel.swift in Sources */,
-				347E567224DF14520067F5AB /* SceneDelegate.swift in Sources */,
-				347E567424DF14520067F5AB /* ContentView.swift in Sources */,
+				6B5D6CF328E0CB2700D76719 /* CircuitRealmModel.swift in Sources */,
+				6BB2A8E928D63F9100E0E504 /* RaceSchedule.swift in Sources */,
+				6B5D6CD728DF5A0100D76719 /* RacesModelLogic.swift in Sources */,
+				6B5D6CCF28DF419800D76719 /* RestError.swift in Sources */,
+				6BDE65D428DBA15000592031 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -515,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,7 +628,6 @@
 		};
 		347E568124DF14550067F5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A55DCF69D76E300F50F84FB /* Pods-ScoreBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,7 +635,7 @@
 				DEVELOPMENT_TEAM = A24EY6XQJ9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScoreBoard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +649,6 @@
 		};
 		347E568224DF14550067F5AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0B18F44AD744603CFBBCA15 /* Pods-ScoreBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -557,7 +656,7 @@
 				DEVELOPMENT_TEAM = A24EY6XQJ9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScoreBoard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,6 +690,86 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B5D6CDD28DF5F5600D76719 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		6BB2A8EC28D641DA00E0E504 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B5D6CDE28DF5F5600D76719 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B5D6CDD28DF5F5600D76719 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		6B5D6CE028DF5F5600D76719 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B5D6CDD28DF5F5600D76719 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6BB2A8ED28D641DA00E0E504 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8EC28D641DA00E0E504 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6BB2A8F528D7A9FA00E0E504 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		6BB2A8F728D7A9FA00E0E504 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6BB2A8F928D7A9FA00E0E504 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		6BB2A8FB28D7A9FA00E0E504 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		6BB2A8FD28D7A9FA00E0E504 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		6BB2A8FF28D7A9FA00E0E504 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		6BB2A90128D7A9FA00E0E504 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BB2A8F428D7A9FA00E0E504 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 347E566424DF14520067F5AB /* Project object */;
 }

@@ -49,14 +49,10 @@ struct GrandPrixPath: View {
                 
                 Color.blue
                     .frame(width: .infinity, height: 300, alignment: .center)
-                
             }
             
             .navigationBarTitle(Text("Grand Prix"))
         }
-       
-        
-        
     }
 }
 
