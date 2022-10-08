@@ -20,9 +20,9 @@ enum ModelLogicError: Error, LocalizedError {
 final class SeasonModelLogic {
     
     static let shared = SeasonModelLogic()
-    let realm = try! Realm()
-   
     
+    let context = PersistenceController.shared.persistentCloudContainer.viewContext
+
     private init(){}
     
     func loadFromBackend() async throws {
@@ -37,16 +37,32 @@ final class SeasonModelLogic {
                 throw ModelLogicError.notCurrenSeassonFound
             }
             
-            if let _ = realm.object(ofType: SeassonsRealmModel.self, forPrimaryKey: currentSeassonString) {
-                    //Nothing to do because the model only has one key that is the model itself.
-            } else {
-                let currentSeassonRealmModel = SeassonsRealmModel(season: currentSeassonString)
-                try realm.write({
-                    realm.add(currentSeassonRealmModel, update: .all)
-                })
+            try await context.perform { [self] in
+                    
+                let fetchSeason = SeassonCDM.fetchRequest()
+                    fetchSeason.fetchLimit = 1
+                    fetchSeason.predicate = NSPredicate(format: "%K = %@", #keyPath(SeassonCDM.seasson), currentSeassonString)
+                
+                let seassonsResponse = try context.fetch(fetchSeason)
+                if let persistedSeasson = seassonsResponse.first {
+                    //Nothing to do
+                } else {
+                    let newSeasson = SeassonCDM(context: context)
+                    newSeasson.seasson = currentSeassonString
+                }
+                
+                if context.hasChanges {
+                    do {
+                        try context.save()
+                    } catch {
+                        let nserror = error as NSError
+                        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                    }
+                }
 
             }
             
+           // PersistenceController.shared.saveContext()
             currentSeasson = currentSeassonString
             
             

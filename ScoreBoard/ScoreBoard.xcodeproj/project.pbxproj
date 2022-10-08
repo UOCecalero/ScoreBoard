@@ -18,6 +18,16 @@
 		349E921024EC55E400D43A8A /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E920F24EC55E400D43A8A /* RestManager.swift */; };
 		349E921224EC56AE00D43A8A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E921124EC56AE00D43A8A /* Endpoints.swift */; };
 		6B103BB726A9C72D00E32449 /* RequestBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B103BB626A9C72D00E32449 /* RequestBuilderProtocol.swift */; };
+		6B3E86B628F1938D00E72561 /* CDQualifyingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86B528F1938D00E72561 /* CDQualifyingResult.swift */; };
+		6B3E86B828F1946500E72561 /* CDRaceDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86B728F1946500E72561 /* CDRaceDateTime.swift */; };
+		6B3E86BA28F1947300E72561 /* CDPitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86B928F1947300E72561 /* CDPitStop.swift */; };
+		6B3E86BC28F1948900E72561 /* CDRaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86BB28F1948900E72561 /* CDRaceResult.swift */; };
+		6B3E86BE28F1950F00E72561 /* CDDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86BD28F1950F00E72561 /* CDDriver.swift */; };
+		6B3E86C028F1951800E72561 /* CDConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86BF28F1951800E72561 /* CDConstructor.swift */; };
+		6B3E86C228F1983000E72561 /* CDResultTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C128F1983000E72561 /* CDResultTime.swift */; };
+		6B3E86C428F1985E00E72561 /* CDFastestLapTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C328F1985E00E72561 /* CDFastestLapTime.swift */; };
+		6B3E86C628F1987C00E72561 /* CDAverageSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C528F1987C00E72561 /* CDAverageSpeed.swift */; };
+		6B3E86C828F198AC00E72561 /* CDFastestLap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C728F198AC00E72561 /* CDFastestLap.swift */; };
 		6B4B1D4E26B8428300BC7CCB /* ChampionshipPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */; };
 		6B5D6CCF28DF419800D76719 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CCE28DF419800D76719 /* RestError.swift */; };
 		6B5D6CD128DF4CF700D76719 /* PreLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */; };
@@ -46,7 +56,6 @@
 		6BB2A8E628D63F9100E0E504 /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DB28D63F9100E0E504 /* Drivers.swift */; };
 		6BB2A8E728D63F9100E0E504 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DC28D63F9100E0E504 /* Constructors.swift */; };
 		6BB2A8E828D63F9100E0E504 /* Circuits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DD28D63F9100E0E504 /* Circuits.swift */; };
-		6BB2A8E928D63F9100E0E504 /* RaceSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DE28D63F9100E0E504 /* RaceSchedule.swift */; };
 		6BB2A8EA28D63F9100E0E504 /* QualifyingResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8DF28D63F9100E0E504 /* QualifyingResults.swift */; };
 		6BB2A8EB28D63F9100E0E504 /* FinishingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8E028D63F9100E0E504 /* FinishingStatus.swift */; };
 		6BB2A8EE28D641DA00E0E504 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6BB2A8ED28D641DA00E0E504 /* Alamofire */; };
@@ -60,8 +69,12 @@
 		6BBAE12326B72058004FDD8D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBAE12226B72058004FDD8D /* MainView.swift */; };
 		6BC8D3CD26890A350010D378 /* ApisportsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D3CC26890A350010D378 /* ApisportsAPICall.swift */; };
 		6BC8D3D126890A690010D378 /* SportsMonksAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D3D026890A690010D378 /* SportsMonksAPICall.swift */; };
+		6BC9F4E128E1C46B00305786 /* ScoreBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9F4DF28E1C46B00305786 /* ScoreBoard.xcdatamodeld */; };
 		6BDE65D128DBA04900592031 /* ErgastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE65D028DBA04900592031 /* ErgastAPI.swift */; };
 		6BDE65D428DBA15000592031 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE65D328DBA15000592031 /* Constants.swift */; };
+		6BE60A8728E852260089F989 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE60A8628E852260089F989 /* Race.swift */; };
+		6BE60A8A28E8BA880089F989 /* GrandPrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE60A8928E8BA880089F989 /* GrandPrixView.swift */; };
+		6BE60A8C28E8BD020089F989 /* GrandPrixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE60A8B28E8BD020089F989 /* GrandPrixViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +91,16 @@
 		349E920F24EC55E400D43A8A /* RestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		349E921124EC56AE00D43A8A /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		6B103BB626A9C72D00E32449 /* RequestBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderProtocol.swift; sourceTree = "<group>"; };
+		6B3E86B528F1938D00E72561 /* CDQualifyingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDQualifyingResult.swift; sourceTree = "<group>"; };
+		6B3E86B728F1946500E72561 /* CDRaceDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDRaceDateTime.swift; sourceTree = "<group>"; };
+		6B3E86B928F1947300E72561 /* CDPitStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPitStop.swift; sourceTree = "<group>"; };
+		6B3E86BB28F1948900E72561 /* CDRaceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDRaceResult.swift; sourceTree = "<group>"; };
+		6B3E86BD28F1950F00E72561 /* CDDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDriver.swift; sourceTree = "<group>"; };
+		6B3E86BF28F1951800E72561 /* CDConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDConstructor.swift; sourceTree = "<group>"; };
+		6B3E86C128F1983000E72561 /* CDResultTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDResultTime.swift; sourceTree = "<group>"; };
+		6B3E86C328F1985E00E72561 /* CDFastestLapTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFastestLapTime.swift; sourceTree = "<group>"; };
+		6B3E86C528F1987C00E72561 /* CDAverageSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDAverageSpeed.swift; sourceTree = "<group>"; };
+		6B3E86C728F198AC00E72561 /* CDFastestLap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFastestLap.swift; sourceTree = "<group>"; };
 		6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipPath.swift; sourceTree = "<group>"; };
 		6B5D6CCE28DF419800D76719 /* RestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
 		6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoaderView.swift; sourceTree = "<group>"; };
@@ -104,15 +127,18 @@
 		6BB2A8DB28D63F9100E0E504 /* Drivers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
 		6BB2A8DC28D63F9100E0E504 /* Constructors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constructors.swift; sourceTree = "<group>"; };
 		6BB2A8DD28D63F9100E0E504 /* Circuits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circuits.swift; sourceTree = "<group>"; };
-		6BB2A8DE28D63F9100E0E504 /* RaceSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceSchedule.swift; sourceTree = "<group>"; };
 		6BB2A8DF28D63F9100E0E504 /* QualifyingResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualifyingResults.swift; sourceTree = "<group>"; };
 		6BB2A8E028D63F9100E0E504 /* FinishingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishingStatus.swift; sourceTree = "<group>"; };
 		6BBAE12226B72058004FDD8D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6BC8D3CC26890A350010D378 /* ApisportsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApisportsAPICall.swift; sourceTree = "<group>"; };
 		6BC8D3D026890A690010D378 /* SportsMonksAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsMonksAPICall.swift; sourceTree = "<group>"; };
+		6BC9F4E028E1C46B00305786 /* ScoreBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoreBoard.xcdatamodel; sourceTree = "<group>"; };
 		6BD81BAF26933CFF0018AF33 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6BDE65D028DBA04900592031 /* ErgastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErgastAPI.swift; sourceTree = "<group>"; };
 		6BDE65D328DBA15000592031 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6BE60A8628E852260089F989 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		6BE60A8928E8BA880089F989 /* GrandPrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrixView.swift; sourceTree = "<group>"; };
+		6BE60A8B28E8BD020089F989 /* GrandPrixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrixViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +174,7 @@
 		347E566324DF14520067F5AB = {
 			isa = PBXGroup;
 			children = (
+				6BC9F4DF28E1C46B00305786 /* ScoreBoard.xcdatamodeld */,
 				6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */,
 				347E566E24DF14520067F5AB /* ScoreBoard */,
 				347E566D24DF14520067F5AB /* Products */,
@@ -171,6 +198,7 @@
 				6BDE65CD28DB9FB100592031 /* Libraries */,
 				6BDE65CC28DB9FAB00592031 /* Helpers */,
 				6BBAE12126B72031004FDD8D /* Views */,
+				6BE60A8828E8BA3E0089F989 /* GrandPrixPath */,
 				6BDE65CF28DBA00300592031 /* Endpoints */,
 				349E920E24EC54F800D43A8A /* RestManager */,
 				349E920924EC539300D43A8A /* API */,
@@ -216,6 +244,23 @@
 			children = (
 			);
 			path = Layer;
+			sourceTree = "<group>";
+		};
+		6B3E86B428F1937100E72561 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6B3E86B528F1938D00E72561 /* CDQualifyingResult.swift */,
+				6B3E86B728F1946500E72561 /* CDRaceDateTime.swift */,
+				6B3E86B928F1947300E72561 /* CDPitStop.swift */,
+				6B3E86BB28F1948900E72561 /* CDRaceResult.swift */,
+				6B3E86BD28F1950F00E72561 /* CDDriver.swift */,
+				6B3E86BF28F1951800E72561 /* CDConstructor.swift */,
+				6B3E86C128F1983000E72561 /* CDResultTime.swift */,
+				6B3E86C328F1985E00E72561 /* CDFastestLapTime.swift */,
+				6B3E86C528F1987C00E72561 /* CDAverageSpeed.swift */,
+				6B3E86C728F198AC00E72561 /* CDFastestLap.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		6B5D6CCC28DF413600D76719 /* Protocols */ = {
@@ -297,6 +342,7 @@
 		6B5D6D1A28E1A24400D76719 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				6B3E86B428F1937100E72561 /* Classes */,
 				6B5D6D1B28E1A25F00D76719 /* Persistence.swift */,
 			);
 			path = CoreData;
@@ -305,7 +351,6 @@
 		6BB2A8D528D63F9100E0E504 /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
-				6BB2A8D628D63F9100E0E504 /* RaceResults.swift */,
 				6BB2A8D728D63F9100E0E504 /* PitStops.swift */,
 				6BB2A8D828D63F9100E0E504 /* DriverStandings.swift */,
 				6BB2A8D928D63F9100E0E504 /* Seasons.swift */,
@@ -313,7 +358,8 @@
 				6BB2A8DB28D63F9100E0E504 /* Drivers.swift */,
 				6BB2A8DC28D63F9100E0E504 /* Constructors.swift */,
 				6BB2A8DD28D63F9100E0E504 /* Circuits.swift */,
-				6BB2A8DE28D63F9100E0E504 /* RaceSchedule.swift */,
+				6BB2A8D628D63F9100E0E504 /* RaceResults.swift */,
+				6BE60A8628E852260089F989 /* Race.swift */,
 				6BB2A8DF28D63F9100E0E504 /* QualifyingResults.swift */,
 				6BB2A8E028D63F9100E0E504 /* FinishingStatus.swift */,
 			);
@@ -371,6 +417,15 @@
 				6BDE65D328DBA15000592031 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		6BE60A8828E8BA3E0089F989 /* GrandPrixPath */ = {
+			isa = PBXGroup;
+			children = (
+				6BE60A8928E8BA880089F989 /* GrandPrixView.swift */,
+				6BE60A8B28E8BD020089F989 /* GrandPrixViewModel.swift */,
+			);
+			path = GrandPrixPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,25 +518,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3E86B628F1938D00E72561 /* CDQualifyingResult.swift in Sources */,
+				6B3E86C028F1951800E72561 /* CDConstructor.swift in Sources */,
 				6B5D6CEF28E0C48000D76719 /* RacesRealmModel.swift in Sources */,
+				6B3E86BE28F1950F00E72561 /* CDDriver.swift in Sources */,
+				6BC9F4E128E1C46B00305786 /* ScoreBoard.xcdatamodeld in Sources */,
 				6BC8D3D126890A690010D378 /* SportsMonksAPICall.swift in Sources */,
 				6BB2A8EA28D63F9100E0E504 /* QualifyingResults.swift in Sources */,
 				6B5D6CE928DF686700D76719 /* SeassonsRealmModel.swift in Sources */,
 				6B5D6CED28DFB83800D76719 /* DriversRealmModel.swift in Sources */,
+				6B3E86BA28F1947300E72561 /* CDPitStop.swift in Sources */,
 				6B5D6CD428DF4E4E00D76719 /* PreloaderViewModel.swift in Sources */,
 				6B5D6CEB28DFB51D00D76719 /* ConstructorsRealmModel.swift in Sources */,
 				349E920B24EC53D400D43A8A /* APISession.swift in Sources */,
 				6B5D6CD128DF4CF700D76719 /* PreLoaderView.swift in Sources */,
+				6BE60A8C28E8BD020089F989 /* GrandPrixViewModel.swift in Sources */,
 				6BB2A8E828D63F9100E0E504 /* Circuits.swift in Sources */,
 				6BB2A8E128D63F9100E0E504 /* RaceResults.swift in Sources */,
 				349E921224EC56AE00D43A8A /* Endpoints.swift in Sources */,
 				341BE4F324EF02770013FF29 /* AutoColorRing.swift in Sources */,
+				6BE60A8A28E8BA880089F989 /* GrandPrixView.swift in Sources */,
 				6BB2A8E328D63F9100E0E504 /* DriverStandings.swift in Sources */,
 				6BDE65D128DBA04900592031 /* ErgastAPI.swift in Sources */,
 				6B103BB726A9C72D00E32449 /* RequestBuilderProtocol.swift in Sources */,
+				6B3E86B828F1946500E72561 /* CDRaceDateTime.swift in Sources */,
 				347E567024DF14520067F5AB /* ScoreBoardApp.swift in Sources */,
 				341BE4F124EEF8680013FF29 /* RingView.swift in Sources */,
 				6BB2A8E528D63F9100E0E504 /* Laps.swift in Sources */,
+				6B3E86C228F1983000E72561 /* CDResultTime.swift in Sources */,
 				6B5D6D1C28E1A25F00D76719 /* Persistence.swift in Sources */,
 				6B5D6CE528DF679E00D76719 /* ConstructorsModelLogic.swift in Sources */,
 				6B5D6CDB28DF5A2B00D76719 /* DriversModelLogic.swift in Sources */,
@@ -490,20 +554,24 @@
 				6B5D6CF528E0D06900D76719 /* AppContainerView.swift in Sources */,
 				349E921024EC55E400D43A8A /* RestManager.swift in Sources */,
 				6BB2A8E228D63F9100E0E504 /* PitStops.swift in Sources */,
+				6B3E86C628F1987C00E72561 /* CDAverageSpeed.swift in Sources */,
 				349E920D24EC540D00D43A8A /* APIProtocols.swift in Sources */,
 				6BB2A8EB28D63F9100E0E504 /* FinishingStatus.swift in Sources */,
 				6BB2A8E728D63F9100E0E504 /* Constructors.swift in Sources */,
 				6B4B1D4E26B8428300BC7CCB /* ChampionshipPath.swift in Sources */,
 				6BBAE12326B72058004FDD8D /* MainView.swift in Sources */,
 				6B5D6CE328DF672000D76719 /* SeasonModelLogic.swift in Sources */,
+				6B3E86C428F1985E00E72561 /* CDFastestLapTime.swift in Sources */,
 				6B5D6CF828E0D14500D76719 /* AppStateViewModel.swift in Sources */,
+				6B3E86C828F198AC00E72561 /* CDFastestLap.swift in Sources */,
 				6BB2A8E428D63F9100E0E504 /* Seasons.swift in Sources */,
 				6BC8D3CD26890A350010D378 /* ApisportsAPICall.swift in Sources */,
 				6B5D6CF328E0CB2700D76719 /* CircuitRealmModel.swift in Sources */,
-				6BB2A8E928D63F9100E0E504 /* RaceSchedule.swift in Sources */,
 				6B5D6CD728DF5A0100D76719 /* RacesModelLogic.swift in Sources */,
 				6B5D6CCF28DF419800D76719 /* RestError.swift in Sources */,
 				6BDE65D428DBA15000592031 /* Constants.swift in Sources */,
+				6B3E86BC28F1948900E72561 /* CDRaceResult.swift in Sources */,
+				6BE60A8728E852260089F989 /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +850,19 @@
 			productName = FirebaseRemoteConfigSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6BC9F4DF28E1C46B00305786 /* ScoreBoard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6BC9F4E028E1C46B00305786 /* ScoreBoard.xcdatamodel */,
+			);
+			currentVersion = 6BC9F4E028E1C46B00305786 /* ScoreBoard.xcdatamodel */;
+			path = ScoreBoard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 347E566424DF14520067F5AB /* Project object */;
 }

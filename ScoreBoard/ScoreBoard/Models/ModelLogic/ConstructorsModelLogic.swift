@@ -13,7 +13,7 @@ final class ConstructorsModelLogic {
     
     static let shared = ConstructorsModelLogic()
     
-    let realm = try! Realm()
+    let context = PersistenceController.shared.persistentCloudContainer.viewContext
     
     private init(){}
     
@@ -33,21 +33,48 @@ final class ConstructorsModelLogic {
                 throw ModelLogicError.notCurrenSeassonFound
             }
             
-            let realm = try! await Realm()
-            
-            //Save or update ConstructorsRealmModel
-            try constructorsJSON.data.constructorTable.constructors.forEach {
-                
-                    let constructorRealmModel = ConstructorsRealmModel(seasson: currentSeasson,
-                                                                      constructorId: $0.constructorId,
-                                                                      url: $0.url,
-                                                                      name: $0.name,
-                                                                      nationality: $0.nationality)
-                    try realm.write({
-                        realm.add(constructorRealmModel, update: .modified)
-                    })
+            for constructor in constructorsJSON.data.constructorTable.constructors {
+       
+                         try await self.context.perform { [self] in
+                                 
+                             let constructorSeason = ConstructorsCDM.fetchRequest()
+                                 constructorSeason.fetchLimit = 1
+                                 constructorSeason.predicate = NSPredicate(format: "%K = %@ AND %K = %@",
+                                                                 #keyPath(ConstructorsCDM.seassonId), currentSeasson,
+                                                                 #keyPath(ConstructorsCDM.constructorId), constructor.constructorId)
+                             
+                             let seassonsResponse = try context.fetch(constructorSeason)
+                             if let persistedConstructor = seassonsResponse.first {
+                                 persistedConstructor.url = constructor.url
+                                 persistedConstructor.name = constructor.name
+                                 persistedConstructor.nationality = constructor.nationality
+                             } else {
+                                 let newConstructor = ConstructorsCDM(context: context)
+                                 newConstructor.seassonId = currentSeasson
+                                 newConstructor.constructorId = constructor.constructorId
+                                 newConstructor.url = constructor.url
+                                 newConstructor.name = constructor.name
+                                 newConstructor.nationality = constructor.nationality
+                             }
+                             
+                             if context.hasChanges {
+                                 do {
+                                     try context.save()
+                                 } catch {
+                                     let nserror = error as NSError
+                                     fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                                 }
+                             }
 
-                }
+                         }
+            }
+            
+           // PersistenceController.shared.saveContext()
+            
+            
+          
+            
+            
             
             
         case .failure(let error):

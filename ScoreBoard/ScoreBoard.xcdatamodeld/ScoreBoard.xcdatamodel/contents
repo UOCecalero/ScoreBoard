@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CircuitCDM" representedClassName="CircuitCDM" syncable="YES" codeGenerationType="class">
+        <attribute name="circuitId" optional="YES" attributeType="String"/>
+        <attribute name="circuitName" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationCDM"/>
+    </entity>
+    <entity name="ConstructorsCDM" representedClassName="ConstructorsCDM" syncable="YES" codeGenerationType="class">
+        <attribute name="constructorId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="nationality" optional="YES" attributeType="String"/>
+        <attribute name="seassonId" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DriversCDM" representedClassName="DriversCDM" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="constructorId" optional="YES" attributeType="String"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
+        <attribute name="driverId" optional="YES" attributeType="String"/>
+        <attribute name="familyName" optional="YES" attributeType="String"/>
+        <attribute name="givenName" optional="YES" attributeType="String"/>
+        <attribute name="nationality" optional="YES" attributeType="String"/>
+        <attribute name="permanentNumber" optional="YES" attributeType="String"/>
+        <attribute name="seassonId" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LocationCDM" representedClassName="LocationCDM" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="String"/>
+        <attribute name="locality" optional="YES" attributeType="String"/>
+        <attribute name="long" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RaceCDM" representedClassName="RaceCDM" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="firstPracticeDateTime" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="CDRaceDateTime"/>
+        <attribute name="pitStops" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[CDPitStop]"/>
+        <attribute name="qualifyingDateTime" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="CDRaceDateTime"/>
+        <attribute name="qualifyingResults" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[CDQualifyingResult]"/>
+        <attribute name="raceName" optional="YES" attributeType="String"/>
+        <attribute name="results" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[CDRaceResult]"/>
+        <attribute name="round" optional="YES" attributeType="String"/>
+        <attribute name="seassonId" optional="YES" attributeType="String"/>
+        <attribute name="secondPracticeDateTime" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="CDRaceDateTime"/>
+        <attribute name="sprintDateTime" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="CDRaceDateTime"/>
+        <attribute name="thirthPracticeDateTime" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="CDRaceDateTime"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="circuit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CircuitCDM"/>
+    </entity>
+    <entity name="SeassonCDM" representedClassName="SeassonCDM" syncable="YES" codeGenerationType="class">
+        <attribute name="seasson" optional="YES" attributeType="String"/>
+    </entity>
+</model>

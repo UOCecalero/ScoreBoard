@@ -8,51 +8,52 @@
 
 import SwiftUI
 
+
+
 struct MainView: View {
     var body: some View {
         TabView(){
             
-            GrandPrixPath()
+            StatsPath()
                 .tabItem {
-                    Image(systemName: "1.square.fill")
+                    Image("tvTab")
                     Text("GP")
                 }
             
             ChampionshipPath()
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image("champTab")
                     Text("Championship")
                 }
             
-            StatsPath()
-                .tabItem {
-                    Image(systemName: "3.square.fill")
-                    Text("Stats")
-                }
-          }
+            NavigationView {
+                GrandPrixView()
+                    .tabItem {
+                        Image(systemName: "gpTab")
+                        Text("Stats")
+                    }
+            }
+           
             
+            ChampionshipPath()
+                .tabItem {
+                    Image(systemName: "pilotTab")
+                    Text("Championship")
+                }
+            
+            ChampionshipPath()
+                .tabItem {
+                    Image(systemName: "configTab")
+                    Text("Championship")
+                }
+        }
     }
+        
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-    }
-}
-
-struct GrandPrixPath: View {
-    var body: some View {
-        NavigationView(){
-            VStack {
-                Color.green
-                    .frame(width: .infinity, height: 200)
-                
-                Color.blue
-                    .frame(width: .infinity, height: 300, alignment: .center)
-            }
-            
-            .navigationBarTitle(Text("Grand Prix"))
-        }
     }
 }
 

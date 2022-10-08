@@ -13,6 +13,8 @@ final class DriversModelLogic {
     
     static let shared = DriversModelLogic()
     
+    let context = PersistenceController.shared.persistentCloudContainer.viewContext
+    
     private init(){}
     
     func loadFromBackend() async throws {
@@ -22,49 +24,80 @@ final class DriversModelLogic {
             throw RacesModelLogicError.invalidCurrentSeasson
         }
         
-        let realm = try! await Realm()
+        let teamsFetchRequest = ConstructorsCDM.fetchRequest()
+        teamsFetchRequest.predicate = NSPredicate(format: "%K = %@", #keyPath(ConstructorsCDM.seassonId), currentSeasson)
         
-        let teams = Array(realm.objects(ConstructorsRealmModel.self).where({  $0.seassonId == currentSeasson }))
-    
+        let constructorsFetchResponse = try context.fetch(teamsFetchRequest)
         
-        for team in teams {
+        for constructor in constructorsFetchResponse {
              await withThrowingTaskGroup(of: Void.self) { group in
                 group.addTask(priority: .userInitiated) {
-                    try await self.updateConstructorForTeam( currentSeassonInt, team: team)
+                    try await self.updateConstructorForTeam( currentSeassonInt, team: constructor)
                 }
             }
         }
     }
     
     
-    fileprivate func updateConstructorForTeam(_ currentSeassonInt: Int, team: ConstructorsRealmModel) async throws {
+    fileprivate func updateConstructorForTeam(_ currentSeassonInt: Int, team: ConstructorsCDM) async throws {
         let response = await RestManager.manager.requestObject(ErgastAPI.drivers(currentSeassonInt, team: team.constructorId), responseType: Drivers.self)
 
         switch response.result {
-        case .success(let diriversJSON):
+        case .success(let driversJSON):
 
-            guard !currentSeasson.isEmpty else {
-                throw ModelLogicError.notCurrenSeassonFound
-            }
+            let currentSeasson = String(currentSeassonInt)
             
-            let realm = try! await Realm()
+                    for driver in driversJSON.data.driverTable.drivers {
+                        try await self.context.perform { [self] in
+                                
+                            let driversFetchrequest = DriversCDM.fetchRequest()
+                                driversFetchrequest.fetchLimit = 1
+                                driversFetchrequest.predicate = NSPredicate(format: "%K = %@ AND %K = %@ AND %K = %@",
+                                                                #keyPath(DriversCDM.seassonId), currentSeasson,
+                                                                #keyPath(DriversCDM.constructorId), team.constructorId!,
+                                                                #keyPath(DriversCDM.driverId), driver.driverId)
+                            
+                            let driversResponse = try context.fetch(driversFetchrequest)
+                            if let persistedDriver = driversResponse.first {
+                                persistedDriver.seassonId = currentSeasson
+                                persistedDriver.constructorId = team.constructorId
+                                persistedDriver.driverId = driver.driverId
+                                persistedDriver.url = driver.url
+                                persistedDriver.code = driver.code
+                                persistedDriver.nationality = driver.nationality
+                                persistedDriver.permanentNumber = driver.permanentNumber
+                                persistedDriver.givenName = driver.givenName
+                                persistedDriver.familyName = driver.familyName
+                                persistedDriver.dateOfBirth = driver.dateOfBirth
+                                
+                            } else {
+                                let newDriver = DriversCDM(context: context)
+                                newDriver.seassonId = currentSeasson
+                                newDriver.constructorId = team.constructorId
+                                newDriver.driverId = driver.driverId
+                                newDriver.url = driver.url
+                                newDriver.code = driver.code
+                                newDriver.nationality = driver.nationality
+                                newDriver.permanentNumber = driver.permanentNumber
+                                newDriver.givenName = driver.givenName
+                                newDriver.familyName = driver.familyName
+                                newDriver.dateOfBirth = driver.dateOfBirth
+                            }
+                            
+                            if context.hasChanges {
+                                do {
+                                    try context.save()
+                                } catch {
+                                    let nserror = error as NSError
+                                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                                }
+                            }
 
-            //Save or update ConstructorsRealmModel
-            try diriversJSON.data.driverTable.drivers.forEach {
-
-                    let constructorRealmModel = DriversRealmModel(seasson: currentSeasson,
-                                                                  constructorId: team.constructorId,
-                                                                  driverId: $0.driverId,
-                                                                  url: $0.url,
-                                                                  givenName: $0.givenName,
-                                                                  familyName: $0.familyName,
-                                                                  dateOfBirth: $0.dateOfBirth,
-                                                                  nationality: $0.nationality)
-                    try realm.write({
-                        realm.add(constructorRealmModel, update: .modified)
-                    })
-
+                        }
+                        
                 }
+            
+                //PersistenceController.shared.saveContext()
 
 
         case .failure(let error):

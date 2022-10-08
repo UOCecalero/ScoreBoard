@@ -21,7 +21,7 @@ struct ScoreBoardApp: App {
         WindowGroup {
             AppContainerView()
                     .environmentObject(appStateViewModel)
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .environment(\.managedObjectContext, persistenceController.persistentCloudContainer.viewContext)
         }
     }
 }
