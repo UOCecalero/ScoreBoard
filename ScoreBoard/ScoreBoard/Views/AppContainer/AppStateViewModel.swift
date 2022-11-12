@@ -18,6 +18,6 @@ final class AppStateViewModel: ObservableObject {
     }
     
     
-    @Published var loadingState: LoadingStateEnum = .start
+    @Published var initialLoadingState: LoadingStateEnum = .start
     
 }

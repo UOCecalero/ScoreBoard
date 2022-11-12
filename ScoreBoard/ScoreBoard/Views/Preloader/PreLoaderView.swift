@@ -23,11 +23,11 @@ struct PreLoaderView: View {
                 .font(.largeTitle)
         }.task {
             do {
-                appState.loadingState = .loading
+                appState.initialLoadingState = .loading
                 try await viewModel.downloadData()
-                appState.loadingState = .end
+                appState.initialLoadingState = .end
             } catch {
-                appState.loadingState = .error
+                appState.initialLoadingState = .error
             }
         }
             

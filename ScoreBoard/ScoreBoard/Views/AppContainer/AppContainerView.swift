@@ -15,7 +15,7 @@ struct AppContainerView: View {
     var body: some View {
         
         VStack {
-            if appState.loadingState == .end {
+            if appState.initialLoadingState == .end {
                 MainView()
             } else {
                 PreLoaderView()

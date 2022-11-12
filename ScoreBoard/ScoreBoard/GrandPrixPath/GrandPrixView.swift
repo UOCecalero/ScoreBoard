@@ -9,42 +9,90 @@
 import SwiftUI
 
 
-extension RaceCDM {
-    @objc
-    var currentDate: Date? {
-        let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "YY-mm-dd"
-        return dateFormatter.date(from: self.date ?? "")
-    }
-}
-
 struct GrandPrixView: View {
     
     @ObservedObject var viewModel = GrandPrixViewModel()
-    
 
-    @FetchRequest(sortDescriptors: [SortDescriptor(\RaceCDM.round, order: .forward)],
-                  predicate: NSPredicate(format: "%K <= %@", #keyPath(RaceCDM.currentDate), NSDate()))
+//    @FetchRequest(sortDescriptors: [SortDescriptor(\RaceCDM.round, order: .forward)],
+//                  predicate: NSPredicate(format: "%K <= %@", #keyPath(RaceCDM.ISODateTimeString), Date().ISO8601Format()))
+    
+    @FetchRequest(sortDescriptors: [SortDescriptor(\RaceCDM.round, order: .forward)])
     
     
-    var fetchRaces: FetchedResults<RaceCDM>
+    var fetchedRaces: FetchedResults<RaceCDM>
     
     var body: some View {
-            VStack {
-                ZStack {
-                    Color.green
-                        .frame(width: .infinity, height: 200)
-                    Text(fetchRaces.first?.raceName ?? "")
+        
+        ScrollView {
+            ZStack {
+                
+                VStack {
+                    
+                    ZStack {
+                        Color(.cardGradient2)
+                        
+                        VStack(alignment: .leading) {
+                            
+                            HStack {
+                                Text(viewModel.race?.raceName?.uppercased() ?? "Grand Prix".uppercased())
+                                    .foregroundColor(.white)
+                                    .font(.custom("NicoMoji-Regular", fixedSize: 28))
+                                Circle()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                                    .foregroundColor(Color.red)
+                            }
+                           
+                            Text(viewModel.race?.circuit?.circuitName?.uppercased() ?? "Circuit Name".uppercased())
+                                .foregroundColor(.white)
+                                .font(.custom("NicoMoji-Regular", fixedSize: 15))
+                            
+                            Text(viewModel.race?.circuit?.location?.locality?.capitalized ?? "City")
+                                .foregroundColor(.white)
+                                .font(.custom("NicoMoji-Regular", fixedSize: 15))
+                            
+                            Text(viewModel.race?.circuit?.location?.country?.uppercased() ?? "Country")
+                                .foregroundColor(.white)
+                                .font(.custom("NicoMoji-Regular", fixedSize: 15))
+                                
+                            
+                            VStack(alignment: .center) {
+                                Text(viewModel.nexEventInfo?.name ?? "STARTS IN")
+                                    .foregroundColor(.white)
+                                    .font(.custom("NicoMoji-Regular", fixedSize: 22))
+                                .padding(.top)
+                                
+                                Text(viewModel.nexEventInfo?.remianingTimeString ?? "1D 14:06:22")
+                                    .foregroundColor(.white)
+                                    .font(.custom("NicoMoji-Regular", fixedSize: 28))
+
+                            }
+                            
+                                                    
+                            
+                        }
+                        .padding()
+                    }
+                    .cornerRadius(25)
+                    .padding()
+                   
+                    
+                    
+                    
+                    Color.blue
+                        .frame(height: 300, alignment: .center)
+                    
                 }
-               
+                .padding(.horizontal)
                 
-                
-                Color.blue
-                    .frame(width: .infinity, height: 300, alignment: .center)
+                    .task {
+                        await viewModel.fetchRace()
+                              viewModel.initCountdownIfNeeded()
+                    }
+                    
             }
-            
-            .navigationBarTitle(Text("Grand Prix"))
+        }
     }
+
 }
 
 struct ChampionshipPath_GrandPrixPath: PreviewProvider {

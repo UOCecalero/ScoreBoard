@@ -28,6 +28,15 @@
 		6B3E86C428F1985E00E72561 /* CDFastestLapTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C328F1985E00E72561 /* CDFastestLapTime.swift */; };
 		6B3E86C628F1987C00E72561 /* CDAverageSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C528F1987C00E72561 /* CDAverageSpeed.swift */; };
 		6B3E86C828F198AC00E72561 /* CDFastestLap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86C728F198AC00E72561 /* CDFastestLap.swift */; };
+		6B3E86CB28F1C19400E72561 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86CA28F1C19400E72561 /* String+Extension.swift */; };
+		6B3E86CE28F1CEBD00E72561 /* RaceCDM+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86CD28F1CEBD00E72561 /* RaceCDM+Extension.swift */; };
+		6B3E86D028F1DD7400E72561 /* GrandPrixPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86CF28F1DD7400E72561 /* GrandPrixPath.swift */; };
+		6B3E86D228F2149D00E72561 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86D128F2149D00E72561 /* Date+Extension.swift */; };
+		6B3E86D428F3396200E72561 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B3E86D328F3396200E72561 /* Colors.xcassets */; };
+		6B3E86D728F33B4100E72561 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E86D628F33B4100E72561 /* Color+Extensions.swift */; };
+		6B3E86DD28F3428000E72561 /* NicoMoji-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B3E86DA28F3428000E72561 /* NicoMoji-Regular.ttf */; };
+		6B3E86DE28F3428000E72561 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B3E86DB28F3428000E72561 /* OFL.txt */; };
+		6B3E86DF28F3428000E72561 /* DESCRIPTION.en_us.html in Resources */ = {isa = PBXBuildFile; fileRef = 6B3E86DC28F3428000E72561 /* DESCRIPTION.en_us.html */; };
 		6B4B1D4E26B8428300BC7CCB /* ChampionshipPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */; };
 		6B5D6CCF28DF419800D76719 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CCE28DF419800D76719 /* RestError.swift */; };
 		6B5D6CD128DF4CF700D76719 /* PreLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */; };
@@ -48,6 +57,7 @@
 		6B5D6CF828E0D14500D76719 /* AppStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */; };
 		6B5D6D1C28E1A25F00D76719 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D6D1B28E1A25F00D76719 /* Persistence.swift */; };
 		6B9E1BD326AC722D00A9D6D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */; };
+		6BA2ECCE28F345360054ABB3 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA2ECCD28F345360054ABB3 /* Font+Extension.swift */; };
 		6BB2A8E128D63F9100E0E504 /* RaceResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D628D63F9100E0E504 /* RaceResults.swift */; };
 		6BB2A8E228D63F9100E0E504 /* PitStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D728D63F9100E0E504 /* PitStops.swift */; };
 		6BB2A8E328D63F9100E0E504 /* DriverStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB2A8D828D63F9100E0E504 /* DriverStandings.swift */; };
@@ -101,6 +111,15 @@
 		6B3E86C328F1985E00E72561 /* CDFastestLapTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFastestLapTime.swift; sourceTree = "<group>"; };
 		6B3E86C528F1987C00E72561 /* CDAverageSpeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDAverageSpeed.swift; sourceTree = "<group>"; };
 		6B3E86C728F198AC00E72561 /* CDFastestLap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFastestLap.swift; sourceTree = "<group>"; };
+		6B3E86CA28F1C19400E72561 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		6B3E86CD28F1CEBD00E72561 /* RaceCDM+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RaceCDM+Extension.swift"; sourceTree = "<group>"; };
+		6B3E86CF28F1DD7400E72561 /* GrandPrixPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrixPath.swift; sourceTree = "<group>"; };
+		6B3E86D128F2149D00E72561 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		6B3E86D328F3396200E72561 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		6B3E86D628F33B4100E72561 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		6B3E86DA28F3428000E72561 /* NicoMoji-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NicoMoji-Regular.ttf"; sourceTree = "<group>"; };
+		6B3E86DB28F3428000E72561 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		6B3E86DC28F3428000E72561 /* DESCRIPTION.en_us.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DESCRIPTION.en_us.html; sourceTree = "<group>"; };
 		6B4B1D4D26B8428300BC7CCB /* ChampionshipPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipPath.swift; sourceTree = "<group>"; };
 		6B5D6CCE28DF419800D76719 /* RestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
 		6B5D6CD028DF4CF700D76719 /* PreLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoaderView.swift; sourceTree = "<group>"; };
@@ -119,6 +138,7 @@
 		6B5D6CF728E0D14500D76719 /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
 		6B5D6D1B28E1A25F00D76719 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6B9E1BD226AC722D00A9D6D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6BA2ECCD28F345360054ABB3 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		6BB2A8D628D63F9100E0E504 /* RaceResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceResults.swift; sourceTree = "<group>"; };
 		6BB2A8D728D63F9100E0E504 /* PitStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitStops.swift; sourceTree = "<group>"; };
 		6BB2A8D828D63F9100E0E504 /* DriverStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverStandings.swift; sourceTree = "<group>"; };
@@ -201,7 +221,10 @@
 				6BE60A8828E8BA3E0089F989 /* GrandPrixPath */,
 				6BDE65CF28DBA00300592031 /* Endpoints */,
 				349E920E24EC54F800D43A8A /* RestManager */,
+				6B3E86C928F1C17A00E72561 /* Extensions */,
+				6B3E86D828F3421100E72561 /* Fonts */,
 				349E920924EC539300D43A8A /* API */,
+				6B3E86D328F3396200E72561 /* Colors.xcassets */,
 				347E567524DF14550067F5AB /* Assets.xcassets */,
 				347E567A24DF14550067F5AB /* LaunchScreen.storyboard */,
 				347E567D24DF14550067F5AB /* Info.plist */,
@@ -261,6 +284,43 @@
 				6B3E86C728F198AC00E72561 /* CDFastestLap.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		6B3E86C928F1C17A00E72561 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B3E86CA28F1C19400E72561 /* String+Extension.swift */,
+				6B3E86D128F2149D00E72561 /* Date+Extension.swift */,
+				6B3E86D628F33B4100E72561 /* Color+Extensions.swift */,
+				6BA2ECCD28F345360054ABB3 /* Font+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B3E86CC28F1CEA100E72561 /* MagedObjectsExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B3E86CD28F1CEBD00E72561 /* RaceCDM+Extension.swift */,
+			);
+			path = MagedObjectsExtensions;
+			sourceTree = "<group>";
+		};
+		6B3E86D828F3421100E72561 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6B3E86D928F3428000E72561 /* nicomoji */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		6B3E86D928F3428000E72561 /* nicomoji */ = {
+			isa = PBXGroup;
+			children = (
+				6B3E86DA28F3428000E72561 /* NicoMoji-Regular.ttf */,
+				6B3E86DB28F3428000E72561 /* OFL.txt */,
+				6B3E86DC28F3428000E72561 /* DESCRIPTION.en_us.html */,
+			);
+			path = nicomoji;
 			sourceTree = "<group>";
 		};
 		6B5D6CCC28DF413600D76719 /* Protocols */ = {
@@ -342,6 +402,7 @@
 		6B5D6D1A28E1A24400D76719 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				6B3E86CC28F1CEA100E72561 /* MagedObjectsExtensions */,
 				6B3E86B428F1937100E72561 /* Classes */,
 				6B5D6D1B28E1A25F00D76719 /* Persistence.swift */,
 			);
@@ -422,6 +483,7 @@
 		6BE60A8828E8BA3E0089F989 /* GrandPrixPath */ = {
 			isa = PBXGroup;
 			children = (
+				6B3E86CF28F1DD7400E72561 /* GrandPrixPath.swift */,
 				6BE60A8928E8BA880089F989 /* GrandPrixView.swift */,
 				6BE60A8B28E8BD020089F989 /* GrandPrixViewModel.swift */,
 			);
@@ -504,8 +566,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3E86DE28F3428000E72561 /* OFL.txt in Resources */,
+				6B3E86D428F3396200E72561 /* Colors.xcassets in Resources */,
+				6B3E86DD28F3428000E72561 /* NicoMoji-Regular.ttf in Resources */,
 				347E567C24DF14550067F5AB /* LaunchScreen.storyboard in Resources */,
 				347E567924DF14550067F5AB /* Preview Assets.xcassets in Resources */,
+				6B3E86DF28F3428000E72561 /* DESCRIPTION.en_us.html in Resources */,
 				347E567624DF14550067F5AB /* Assets.xcassets in Resources */,
 				6B9E1BD326AC722D00A9D6D5 /* GoogleService-Info.plist in Resources */,
 			);
@@ -527,6 +593,7 @@
 				6BB2A8EA28D63F9100E0E504 /* QualifyingResults.swift in Sources */,
 				6B5D6CE928DF686700D76719 /* SeassonsRealmModel.swift in Sources */,
 				6B5D6CED28DFB83800D76719 /* DriversRealmModel.swift in Sources */,
+				6B3E86CE28F1CEBD00E72561 /* RaceCDM+Extension.swift in Sources */,
 				6B3E86BA28F1947300E72561 /* CDPitStop.swift in Sources */,
 				6B5D6CD428DF4E4E00D76719 /* PreloaderViewModel.swift in Sources */,
 				6B5D6CEB28DFB51D00D76719 /* ConstructorsRealmModel.swift in Sources */,
@@ -541,7 +608,9 @@
 				6BB2A8E328D63F9100E0E504 /* DriverStandings.swift in Sources */,
 				6BDE65D128DBA04900592031 /* ErgastAPI.swift in Sources */,
 				6B103BB726A9C72D00E32449 /* RequestBuilderProtocol.swift in Sources */,
+				6B3E86CB28F1C19400E72561 /* String+Extension.swift in Sources */,
 				6B3E86B828F1946500E72561 /* CDRaceDateTime.swift in Sources */,
+				6BA2ECCE28F345360054ABB3 /* Font+Extension.swift in Sources */,
 				347E567024DF14520067F5AB /* ScoreBoardApp.swift in Sources */,
 				341BE4F124EEF8680013FF29 /* RingView.swift in Sources */,
 				6BB2A8E528D63F9100E0E504 /* Laps.swift in Sources */,
@@ -561,10 +630,13 @@
 				6B4B1D4E26B8428300BC7CCB /* ChampionshipPath.swift in Sources */,
 				6BBAE12326B72058004FDD8D /* MainView.swift in Sources */,
 				6B5D6CE328DF672000D76719 /* SeasonModelLogic.swift in Sources */,
+				6B3E86D228F2149D00E72561 /* Date+Extension.swift in Sources */,
+				6B3E86D728F33B4100E72561 /* Color+Extensions.swift in Sources */,
 				6B3E86C428F1985E00E72561 /* CDFastestLapTime.swift in Sources */,
 				6B5D6CF828E0D14500D76719 /* AppStateViewModel.swift in Sources */,
 				6B3E86C828F198AC00E72561 /* CDFastestLap.swift in Sources */,
 				6BB2A8E428D63F9100E0E504 /* Seasons.swift in Sources */,
+				6B3E86D028F1DD7400E72561 /* GrandPrixPath.swift in Sources */,
 				6BC8D3CD26890A350010D378 /* ApisportsAPICall.swift in Sources */,
 				6B5D6CF328E0CB2700D76719 /* CircuitRealmModel.swift in Sources */,
 				6B5D6CD728DF5A0100D76719 /* RacesModelLogic.swift in Sources */,
@@ -715,6 +787,7 @@
 				DEVELOPMENT_TEAM = A24EY6XQJ9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScoreBoard/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,8 +795,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.iflet.ScoreBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -736,6 +812,7 @@
 				DEVELOPMENT_TEAM = A24EY6XQJ9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ScoreBoard/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -743,8 +820,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.iflet.ScoreBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

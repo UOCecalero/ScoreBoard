@@ -11,41 +11,46 @@ import SwiftUI
 
 
 struct MainView: View {
+    
+    
+    @State var tab = 2
+    
     var body: some View {
-        TabView(){
+        ZStack {
+            Color(.backgorundColor)
+                .ignoresSafeArea()
             
-            StatsPath()
-                .tabItem {
-                    Image("tvTab")
-                    Text("GP")
-                }
-            
-            ChampionshipPath()
-                .tabItem {
-                    Image("champTab")
-                    Text("Championship")
-                }
-            
-            NavigationView {
-                GrandPrixView()
+            TabView(selection: $tab){
+                
+                StatsPath()
                     .tabItem {
-                        Image(systemName: "gpTab")
-                        Text("Stats")
-                    }
+                        Image("tvTab")
+                    }.tag(0)
+                
+                ChampionshipPath()
+                    .tabItem {
+                        Image("champTab")
+                    }.tag(1)
+                
+                
+                GrandPrixPath()
+                    .badge(2)
+                    .tabItem {
+                        Image("gpTab")
+                    }.tag(2)
+                
+                
+                ChampionshipPath()
+                    .tabItem {
+                        Image("pilotTab")
+                    }.tag(3)
+                
+                ChampionshipPath()
+                    .tabItem {
+                        Image("configTab")
+                    }.tag(4)
             }
-           
-            
-            ChampionshipPath()
-                .tabItem {
-                    Image(systemName: "pilotTab")
-                    Text("Championship")
-                }
-            
-            ChampionshipPath()
-                .tabItem {
-                    Image(systemName: "configTab")
-                    Text("Championship")
-                }
+            .foregroundColor(.white)
         }
     }
         

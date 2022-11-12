@@ -22,6 +22,7 @@ struct ScoreBoardApp: App {
             AppContainerView()
                     .environmentObject(appStateViewModel)
                     .environment(\.managedObjectContext, persistenceController.persistentCloudContainer.viewContext)
+            
         }
     }
 }
@@ -30,6 +31,14 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //FirebaseApp.configure()
+        
+        print("Documents Directory: ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found!")
+        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
+        
         return true
     }
     
